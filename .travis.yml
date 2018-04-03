@@ -28,8 +28,7 @@ before_install: |
     fi
     if [ "$TRAVIS_OS_NAME" = linux ]; then
       scripts/install_cmake.sh
-      pyenv local 3.6
-      pip --version
+      pyenv global 3.6
       pip install --user requests
     elif [ "$TRAVIS_OS_NAME" == "osx" ]; then
       HOMEBREW_NO_AUTO_UPDATE=1 brew install -q python3
